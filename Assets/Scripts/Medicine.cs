@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class Medicine : MonoBehaviour
 {
-    [SerializeField] private string _name;
+    public string _name;
     [SerializeField] private ChemicalName _chemicalName;
-    [SerializeField] private string _urlToImg;
+    public string _urlToImg;
+
+    public float _weight = 5f; // in mg
+    public string _issueDate = "26/07/25";
+
 
     // controls view of image displayed
     ControlEnglargedView _controlEnglargedView;
@@ -22,7 +26,7 @@ public class Medicine : MonoBehaviour
 
     private void OnMouseUp()
     {
-      _controlEnglargedView.SetMedicineImage(_urlToImg);
+      _controlEnglargedView.SetMedicineView(this);
     }
 
 
