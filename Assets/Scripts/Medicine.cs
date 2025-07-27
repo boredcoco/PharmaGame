@@ -16,9 +16,11 @@ public class Medicine : MonoBehaviour
     private bool dragging = false;
     private Vector3 offset;
     private Vector3 _beforeDragPosition;
+    private Rigidbody2D rb;
 
     private void Start()
     {
+      rb = GetComponent<Rigidbody2D>();
       _controlEnglargedView = GameObject.FindWithTag(Tags.ControlEnglargedView).GetComponent<ControlEnglargedView>();
     }
 
@@ -26,7 +28,8 @@ public class Medicine : MonoBehaviour
     {
       if (dragging) {
         // Move object, taking into account original offset.
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+        rb.MovePosition(Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset);
+        // transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
       }
     }
 
