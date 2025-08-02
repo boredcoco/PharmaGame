@@ -24,9 +24,15 @@ public class ElectronicScale : MonoBehaviour
 
     private void Update()
     {
-      if (isMedicineOn)
+      if (isMedicineOn && !Input.GetMouseButton(0))
       {
-        HandleWeightingMed();
+        HandleWeightingMed(); // only show the loading sign if the mouse is off
+      }
+      else // set the weight sign to the default of 0mg
+      {
+        _weightText.text = _defaultWeightTxt;
+        index = 0;
+        StopAllCoroutines();
       }
       // else if (currentMedicine != null)
       // {
@@ -80,6 +86,8 @@ public class ElectronicScale : MonoBehaviour
     {
       if (collision.gameObject.tag == Tags.Medicine)
       {
+        Debug.Log("entered ehre");
+        StopAllCoroutines();
         isMedicineOn = false;
         currentMedicine = null;
         _weightText.text = _defaultWeightTxt;

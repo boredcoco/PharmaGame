@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ControlEnglargedView
   - Medicine
+  - DispenseWindow
   layers:
   - Default
   - TransparentFX
