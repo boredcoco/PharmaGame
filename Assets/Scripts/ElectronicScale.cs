@@ -86,7 +86,6 @@ public class ElectronicScale : MonoBehaviour
     {
       if (collision.gameObject.tag == Tags.Medicine)
       {
-        Debug.Log("entered ehre");
         StopAllCoroutines();
         isMedicineOn = false;
         currentMedicine = null;

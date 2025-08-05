@@ -5,9 +5,12 @@ public class DispenseWindow : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool isMouseDown;
 
+    private MedicineSpawner medSpawner;
+
     private void Start()
     {
       spriteRenderer = GetComponent<SpriteRenderer>();
+      medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<MedicineSpawner>();
     }
 
     private void Update()
@@ -29,6 +32,7 @@ public class DispenseWindow : MonoBehaviour
       {
         if (!isMouseDown)
         {
+          medSpawner.SpawnMedicine();
           Debug.Log("the medicine is dispensed!");
         }
       }
