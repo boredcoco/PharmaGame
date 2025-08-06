@@ -1266,7 +1266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884b96d0eef054007bd1d8d18ee9b0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _medicinePrefab: {fileID: 7809886791734427290, guid: 984fba3ac1a724c19920fb16e44b687b, type: 3}
+  _medicinePrefabs:
+  - {fileID: 7809886791734427290, guid: 984fba3ac1a724c19920fb16e44b687b, type: 3}
+  - {fileID: 6284760599721993001, guid: f6512d86c0950415a92462c9003ead32, type: 3}
   _spawnPosition: {x: 0.26, y: 0.5, z: 1}
 --- !u!1 &1232248952
 GameObject:
