@@ -3,7 +3,7 @@ using UnityEngine;
 public class Medicine : MonoBehaviour
 {
     public string _name;
-    [SerializeField] private ChemicalName _chemicalName;
+    public ChemicalName _chemicalName;
     public string _urlToImg;
 
     public float _weight = 5f; // in mg

@@ -32,7 +32,11 @@ public class DispenseWindow : MonoBehaviour
       {
         if (!isMouseDown)
         {
+          MedicineAnswer med = collider.gameObject.GetComponent<MedicineAnswer>(); // get the medicine to compare
+          bool result = med.VerifyMedicine();
+
           medSpawner.SpawnMedicine();
+          Debug.Log($"The medicine given matches: {result}");
           Debug.Log("the medicine is dispensed!");
         }
       }

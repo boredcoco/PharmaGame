@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6728011542136447953}
   - component: {fileID: 3089818970573111203}
   - component: {fileID: 1811954656453617718}
+  - component: {fileID: 619939872512384350}
   m_Layer: 0
   m_Name: Chloramine
   m_TagString: Medicine
@@ -193,3 +194,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &619939872512384350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7809886791734427290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4f3229e9da34585b678d6584c16738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Chloramine
+  _chemicalName: 1
+  _urlToImg: 
+  _weight: 5
