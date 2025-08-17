@@ -48,11 +48,11 @@ public class Medicine : MonoBehaviour
       dragging = false;
     }
 
-    // private void OnMouseDrag()
-    // {
-    //   offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //   dragging = true;
-    // }
+    // methods to rng the medicine's fields, so that it is "wrong"
+    public void RngMedWeight(float offset)
+    {
+      _weight = Random.Range(_weight - offset, _weight + offset);
+    }
 
 
 }

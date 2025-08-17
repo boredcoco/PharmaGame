@@ -1715,6 +1715,8 @@ MonoBehaviour:
   - {fileID: 7809886791734427290, guid: 984fba3ac1a724c19920fb16e44b687b, type: 3}
   - {fileID: 6284760599721993001, guid: f6512d86c0950415a92462c9003ead32, type: 3}
   _spawnPosition: {x: 0.26, y: 0.5, z: 1}
+  _weightOffset: 1
+  _spawnOrder: 000000000100000000000000
 --- !u!1 &1232248952
 GameObject:
   m_ObjectHideFlags: 0

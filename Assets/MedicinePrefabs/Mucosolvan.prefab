@@ -119,7 +119,7 @@ MonoBehaviour:
   _name: Mucosolvan
   _chemicalName: 0
   _urlToImg: DetailedMeds/5
-  _weight: 99
+  _weight: 100
   _issueDate: 26/07/25
 --- !u!61 &3341837235386668385
 BoxCollider2D:
