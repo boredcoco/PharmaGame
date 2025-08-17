@@ -2,9 +2,29 @@ using UnityEngine;
 
 public class CallDoctor : MonoBehaviour
 {
+    private MedicineSpawner medSpawner;
+
+    private void Start()
+    {
+      medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<MedicineSpawner>();
+    }
+
     public void CallDoc()
     {
       // insert functionality here
-      Debug.Log("Current medicine is wrong, doctor called");
+      bool result = ValidateMedicine();
+      string resultStr = result ? "wrong" : "right";
+
+      Debug.Log($"You have chosen {resultStr}ly");
+
+      medSpawner.SpawnMedicine();
+    }
+
+    private bool ValidateMedicine()
+    {
+      GameObject medicine = GameObject.FindWithTag(Tags.Medicine);
+      MedicineAnswer med = medicine.GetComponent<MedicineAnswer>();
+
+      return med.VerifyMedicine();
     }
 }
