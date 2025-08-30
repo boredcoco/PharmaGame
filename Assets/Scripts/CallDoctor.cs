@@ -25,6 +25,6 @@ public class CallDoctor : MonoBehaviour
       GameObject medicine = GameObject.FindWithTag(Tags.Medicine);
       MedicineAnswer med = medicine.GetComponent<MedicineAnswer>();
 
-      return med.VerifyMedicine();
+      return med.VerifyMedicineWhenDoctorCalled();
     }
 }

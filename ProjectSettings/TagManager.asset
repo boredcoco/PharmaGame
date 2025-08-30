@@ -8,6 +8,7 @@ TagManager:
   - Medicine
   - DispenseWindow
   - MedicineSpawner
+  - NotificationController
   layers:
   - Default
   - TransparentFX
