@@ -13,10 +13,6 @@ public class CallDoctor : MonoBehaviour
     {
       // insert functionality here
       bool result = ValidateMedicine();
-      string resultStr = result ? "wrong" : "right";
-
-      Debug.Log($"You have chosen {resultStr}ly");
-
       medSpawner.SpawnMedicine();
     }
 

@@ -21,15 +21,15 @@ public class MedicineAnswer : MonoBehaviour
     {
       if (medicine._name != _name)
       {
-        notificationController.SetNotification(PrescriptionViolation.IncorrectName, _name, 1);
+        notificationController.SetNotification(PrescriptionViolation.IncorrectName, _name);
       }
       else if (medicine._chemicalName != _chemicalName)
       {
-        notificationController.SetNotification(PrescriptionViolation.IncorrectFormula, _name, 1);
+        notificationController.SetNotification(PrescriptionViolation.IncorrectFormula, _name);
       }
       else if (medicine._weight != _weight)
       {
-        notificationController.SetNotification(PrescriptionViolation.IncorrectWeight, _name, 1);
+        notificationController.SetNotification(PrescriptionViolation.IncorrectWeight, _name);
       }
       return medicine._name == _name && medicine._chemicalName == _chemicalName && medicine._weight == _weight;
     }
@@ -43,7 +43,7 @@ public class MedicineAnswer : MonoBehaviour
         return result;
       }
 
-      notificationController.SetNotificationFalseAlarm(medicine._name, 1);
+      notificationController.SetNotificationFalseAlarm(medicine._name);
       return result;
     }
 }

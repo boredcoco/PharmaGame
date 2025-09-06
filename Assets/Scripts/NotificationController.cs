@@ -7,13 +7,17 @@ public class NotificationController : MonoBehaviour
     [SerializeField] private TMP_Text _violationTxt;
     [SerializeField] private TMP_Text _penaltyTxt;
 
+    [SerializeField] private PenaltyController _penaltyController;
+
     public void CloseNotif()
     {
       _notificationUI.SetActive(false);
     }
 
-    public void SetNotificationFalseAlarm(string medicineName, int penaltyAmt)
+    public void SetNotificationFalseAlarm(string medicineName)
     {
+      int penaltyAmt = _penaltyController.GetPenalty();
+
       _violationTxt.text = $"{medicineName}: Nothing is incorrect about this prescription";
       if (penaltyAmt > 0)
       {
@@ -27,7 +31,7 @@ public class NotificationController : MonoBehaviour
       _notificationUI.SetActive(true);
     }
 
-    public void SetNotification(PrescriptionViolation violationType, string medicineName, int penaltyAmt)
+    public void SetNotification(PrescriptionViolation violationType, string medicineName)
     {
         switch (violationType)
         {
@@ -50,6 +54,8 @@ public class NotificationController : MonoBehaviour
                 _violationTxt.text = "The patient has died";
                 break;
         }
+
+        int penaltyAmt = _penaltyController.GetPenalty();
 
         if (penaltyAmt > 0)
         {
