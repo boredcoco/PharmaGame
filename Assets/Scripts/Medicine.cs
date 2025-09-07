@@ -4,10 +4,12 @@ public class Medicine : MonoBehaviour
 {
     public string _name;
     public ChemicalName _chemicalName;
-    public string _urlToImg;
+    [SerializeField] private string _notPackedProperlyImg;
 
+    public string urlToImgUsed;
     public float _weight = 5f; // in mg
     public string _issueDate = "26/07/25";
+    public bool isPackedProperly = true;
 
     // controls view of image displayed
     ControlEnglargedView _controlEnglargedView;
@@ -24,16 +26,8 @@ public class Medicine : MonoBehaviour
       _controlEnglargedView = GameObject.FindWithTag(Tags.ControlEnglargedView).GetComponent<ControlEnglargedView>();
     }
 
-    private void Update()
+    private void OnMouseDown()
     {
-      if (dragging) {
-        // Move object, taking into account original offset.
-        rb.MovePosition(Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset);
-        // transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
-      }
-    }
-
-    private void OnMouseDown() {
       // Record the difference between the objects centre, and the clicked point on the camera plane.
       offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
       _beforeDragPosition = transform.position;
@@ -52,6 +46,17 @@ public class Medicine : MonoBehaviour
     public void RngMedWeight(float offset)
     {
       _weight = Random.Range(_weight - offset, _weight + offset);
+    }
+
+    // method to set medicine as not packaged properly, so it is "wrong"
+    public void SetAsNotPackedProperly()
+    {
+      isPackedProperly = false;
+      urlToImgUsed = _notPackedProperlyImg;
+
+      SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+      Sprite sprite = Resources.Load<Sprite>(urlToImgUsed);
+      spriteRenderer.sprite = sprite;
     }
 
 

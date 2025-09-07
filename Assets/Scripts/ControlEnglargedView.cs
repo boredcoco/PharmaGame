@@ -5,21 +5,30 @@ using TMPro;
 public class ControlEnglargedView : MonoBehaviour
 {
     [SerializeField] private Image _medicineImage;
+    [SerializeField] private TMP_Text _chemicalFormulaText;
     [SerializeField] private TMP_Text _nameText;
-    [SerializeField] private TMP_Text _weightText;
     [SerializeField] private TMP_Text _dateText;
+
+    public bool isActive;
+
+    private void Start()
+    {
+      isActive = false;
+    }
 
     public void CloseMedicineView()
     {
+      isActive = false;
       _medicineImage.gameObject.SetActive(false);
     }
 
     public void SetMedicineView(Medicine medicine)
     {
+      isActive = true;
       _medicineImage.gameObject.SetActive(true);
-      setMedicineImage(medicine._urlToImg);
+      setMedicineImage(medicine.urlToImgUsed);
+      setChemicalFormulaText(medicine._chemicalName.ToString());
       setNameText(medicine._name);
-      setWeightText(medicine._weight);
       setDateText(medicine._issueDate);
     }
 
@@ -27,8 +36,6 @@ public class ControlEnglargedView : MonoBehaviour
     {
       // load up the sprite
       Sprite sprite = Resources.Load<Sprite>(urlToImg);
-      Debug.Log(sprite);
-      Debug.Log(urlToImg);
       _medicineImage.sprite = sprite;
     }
 
@@ -37,13 +44,13 @@ public class ControlEnglargedView : MonoBehaviour
       _nameText.text = name;
     }
 
-    private void setWeightText(float weight)
-    {
-      _weightText.text = $"{weight}mg/dose";
-    }
-
     private void setDateText(string dateTxt)
     {
       _dateText.text = dateTxt;
+    }
+
+    private void setChemicalFormulaText(string chemicalFormulaText)
+    {
+      _chemicalFormulaText.text = chemicalFormulaText;
     }
 }

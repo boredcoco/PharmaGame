@@ -559,9 +559,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _medicineImage: {fileID: 1928915381}
+  _chemicalFormulaText: {fileID: 240670111}
   _nameText: {fileID: 384115105}
-  _weightText: {fileID: 240670111}
   _dateText: {fileID: 539884435}
+  isActive: 0
 --- !u!1 &235076639
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +711,7 @@ GameObject:
   - component: {fileID: 240670112}
   - component: {fileID: 240670111}
   m_Layer: 5
-  m_Name: WeightText
+  m_Name: ChemFormulaText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -755,7 +756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Weight
+  m_text: Chemical Formula
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2162,7 +2163,7 @@ MonoBehaviour:
   - {fileID: 6284760599721993001, guid: f6512d86c0950415a92462c9003ead32, type: 3}
   _spawnPosition: {x: 0.26, y: 0.5, z: 1}
   _weightOffset: 1
-  _spawnOrder: 000000000100000000000000
+  _spawnOrder: 00000000010000000000000002000000
 --- !u!1 &1232248952
 GameObject:
   m_ObjectHideFlags: 0

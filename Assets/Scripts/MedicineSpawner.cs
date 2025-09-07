@@ -49,6 +49,10 @@ public class MedicineSpawner : MonoBehaviour
       {
         SpawnMedicineWrongWeight();
       }
+      else if (_spawnOrder[_orderPointer] == 2)
+      {
+        SpawnMedicineNotPackedProperly();
+      }
       _orderPointer += 1;
     }
     public void SpawnMedicineCorrect()
@@ -74,6 +78,19 @@ public class MedicineSpawner : MonoBehaviour
 
       currentMed = Instantiate(_medicinePrefabs[randomNumber], _spawnPosition, Quaternion.identity);
       currentMed.GetComponent<Medicine>().RngMedWeight(_weightOffset);
+    }
+
+    public void SpawnMedicineNotPackedProperly()
+    {
+      if (currentMed != null)
+      {
+          Destroy(currentMed);
+      }
+
+      int randomNumber = Random.Range(0, _medicinePrefabs.Length); // rng the prefab
+
+      currentMed = Instantiate(_medicinePrefabs[randomNumber], _spawnPosition, Quaternion.identity);
+      currentMed.GetComponent<Medicine>().SetAsNotPackedProperly();
     }
 
 }

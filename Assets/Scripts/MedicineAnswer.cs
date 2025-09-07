@@ -31,12 +31,16 @@ public class MedicineAnswer : MonoBehaviour
       {
         notificationController.SetNotification(PrescriptionViolation.IncorrectWeight, _name);
       }
+      else if (!medicine.isPackedProperly)
+      {
+        notificationController.SetNotification(PrescriptionViolation.NotSealed, _name);
+      }
       return medicine._name == _name && medicine._chemicalName == _chemicalName && medicine._weight == _weight;
     }
 
     public bool VerifyMedicineWhenDoctorCalled()
     {
-      bool result = medicine._name == _name && medicine._chemicalName == _chemicalName && medicine._weight == _weight;
+      bool result = medicine._name == _name && medicine._chemicalName == _chemicalName && medicine._weight == _weight && medicine.isPackedProperly;
 
       if (!result)
       {

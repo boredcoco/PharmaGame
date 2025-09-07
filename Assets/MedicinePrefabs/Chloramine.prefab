@@ -106,9 +106,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Chloramine
   _chemicalName: 1
-  _urlToImg: DetailedMeds/12
+  _notPackedProperlyImg: PoorlyPackagedMeds/45
+  urlToImgUsed: DetailedMeds/12
   _weight: 5
   _issueDate: 26/07/25
+  isPackedProperly: 1
 --- !u!114 &6728011542136447953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,5 +210,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Chloramine
   _chemicalName: 1
-  _urlToImg: 
   _weight: 5
