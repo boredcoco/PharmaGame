@@ -2163,7 +2163,7 @@ MonoBehaviour:
   - {fileID: 6284760599721993001, guid: f6512d86c0950415a92462c9003ead32, type: 3}
   _spawnPosition: {x: 0.26, y: 0.5, z: 1}
   _weightOffset: 1
-  _spawnOrder: 00000000010000000000000002000000
+  _spawnOrder: 00000000010000000000000002000000000000000000000002000000000000000100000000000000
 --- !u!1 &1232248952
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,10 +2379,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1655389214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.9433, y: -52}
-  m_SizeDelta: {x: 281.8866, y: 36.0619}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 273.1698, y: -50.214108}
+  m_SizeDelta: {x: 528.3395, y: 32.4901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256460000
 MonoBehaviour:
@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ambroyxl Hydroxide
+  m_text: Ambroyxl Hydroxide - 100mg
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4143,10 +4143,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1655389214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.9433, y: 6.969102}
-  m_SizeDelta: {x: 281.8866, y: 36.0619}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 266.0262, y: 6.969102}
+  m_SizeDelta: {x: 514.0524, y: 36.0619}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2116901582
 MonoBehaviour:
@@ -4168,7 +4168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Monochloramine
+  m_text: Monochloramine - 5mg
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
