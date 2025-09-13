@@ -4064,6 +4064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ipadPnl: {fileID: 1626049773}
+  _enlargedControllerview: {fileID: 1928915379}
 --- !u!61 &2096777879
 BoxCollider2D:
   m_ObjectHideFlags: 0

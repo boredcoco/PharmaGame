@@ -3,6 +3,7 @@ using UnityEngine;
 public class Ipad : MonoBehaviour
 {
     [SerializeField] private GameObject _ipadPnl;
+    [SerializeField] private GameObject _enlargedControllerview;
 
     public void ClosePanel()
     {
@@ -11,7 +12,11 @@ public class Ipad : MonoBehaviour
 
     private void OnMouseUp()
     {
-      Debug.Log("HERE");
+      if (_enlargedControllerview.activeSelf)
+      {
+        // make sure no other UI is active
+        return;
+      }
       _ipadPnl.SetActive(true);
     }
 }
