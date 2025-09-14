@@ -10,7 +10,9 @@ public class DispenseWindow : MonoBehaviour
     private void Start()
     {
       spriteRenderer = GetComponent<SpriteRenderer>();
-      medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<MedicineSpawner>();
+      // medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<MedicineSpawner>();
+      // use rng spawner for unlimited mode
+      medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<RNGMedicineSpawner>();
     }
 
     private void Update()

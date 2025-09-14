@@ -35,7 +35,7 @@ public class MedicineSpawner : MonoBehaviour
     /// <summary>
     /// Spawns a medicine prefab at a given position and rotation.
     /// </summary>
-    public void SpawnMedicine()
+    public virtual void SpawnMedicine()
     {
       if (_orderPointer > _spawnOrder.Length - 1)
       {
@@ -55,8 +55,10 @@ public class MedicineSpawner : MonoBehaviour
       }
       _orderPointer += 1;
     }
+
     public void SpawnMedicineCorrect()
     {
+        Debug.Log($"currentmed: {currentMed}");
         if (currentMed != null)
         {
             Destroy(currentMed);

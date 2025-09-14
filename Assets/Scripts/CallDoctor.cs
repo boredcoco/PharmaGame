@@ -6,7 +6,9 @@ public class CallDoctor : MonoBehaviour
 
     private void Start()
     {
-      medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<MedicineSpawner>();
+      // medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<MedicineSpawner>();
+      // use rng spawner for unlimited mode
+      medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<RNGMedicineSpawner>();
     }
 
     public void CallDoc()

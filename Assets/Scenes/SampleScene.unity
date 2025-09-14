@@ -2124,6 +2124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197311662}
   - component: {fileID: 1197311663}
+  - component: {fileID: 1197311664}
   m_Layer: 0
   m_Name: MedicineSpawner
   m_TagString: MedicineSpawner
@@ -2153,7 +2154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197311661}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 884b96d0eef054007bd1d8d18ee9b0b9, type: 3}
   m_Name: 
@@ -2164,6 +2165,28 @@ MonoBehaviour:
   _spawnPosition: {x: 0.26, y: 0.5, z: 1}
   _weightOffset: 1
   _spawnOrder: 00000000010000000000000002000000000000000000000002000000000000000100000000000000
+--- !u!114 &1197311664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197311661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d9e2c6948444b66a43e1145a86f2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _medicinePrefabs:
+  - {fileID: 7809886791734427290, guid: 984fba3ac1a724c19920fb16e44b687b, type: 3}
+  - {fileID: 6284760599721993001, guid: f6512d86c0950415a92462c9003ead32, type: 3}
+  _spawnPosition: {x: 0.26, y: 0.5, z: 1}
+  _weightOffset: 1
+  _spawnOrder: 
+  weights:
+  - 2
+  - 1
+  - 1
 --- !u!1 &1232248952
 GameObject:
   m_ObjectHideFlags: 0
