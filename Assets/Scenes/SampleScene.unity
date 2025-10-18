@@ -2162,9 +2162,10 @@ MonoBehaviour:
   _medicinePrefabs:
   - {fileID: 7809886791734427290, guid: 984fba3ac1a724c19920fb16e44b687b, type: 3}
   - {fileID: 6284760599721993001, guid: f6512d86c0950415a92462c9003ead32, type: 3}
+  - {fileID: 3245250949217795951, guid: d448a6269d63f4b86b3246bc5772a1fd, type: 3}
   _spawnPosition: {x: 0.26, y: 0.5, z: 1}
   _weightOffset: 1
-  _spawnOrder: 00000000010000000000000002000000000000000000000002000000000000000100000000000000
+  _spawnOrder: 02000000010000000000000002000000000000000000000002000000000000000100000000000000
 --- !u!114 &1197311664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2180,13 +2181,16 @@ MonoBehaviour:
   _medicinePrefabs:
   - {fileID: 7809886791734427290, guid: 984fba3ac1a724c19920fb16e44b687b, type: 3}
   - {fileID: 6284760599721993001, guid: f6512d86c0950415a92462c9003ead32, type: 3}
+  - {fileID: 3245250949217795951, guid: d448a6269d63f4b86b3246bc5772a1fd, type: 3}
+  - {fileID: 3245250949217795951, guid: 6e6e22cf9252644f0a13850c403a0943, type: 3}
+  - {fileID: 3245250949217795951, guid: 1580c23de2bda4142b472a2859c7b49b, type: 3}
   _spawnPosition: {x: 0.26, y: 0.5, z: 1}
   _weightOffset: 1
   _spawnOrder: 
   weights:
-  - 2
   - 1
-  - 1
+  - 0
+  - 0
 --- !u!1 &1232248952
 GameObject:
   m_ObjectHideFlags: 0
