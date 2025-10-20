@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class MedicineAnswer : MonoBehaviour
 {
@@ -49,5 +50,15 @@ public class MedicineAnswer : MonoBehaviour
 
       notificationController.SetNotificationFalseAlarm(medicine._name);
       return result;
+    }
+
+    public string GetName()
+    {
+      return _name;
+    }
+
+    public string GetChemicalName()
+    {
+      return Regex.Replace(nameof(_chemicalName), "(?<=[a-z])([A-Z])", " $1");
     }
 }
