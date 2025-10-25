@@ -5,7 +5,7 @@ public class MedicineSpawner : MonoBehaviour
     public static MedicineSpawner Instance { get; private set; }
 
     [SerializeField] private GameObject[] _medicinePrefabs; // Assign in Inspector
-    [SerializeField] private Vector3 _spawnPosition;
+    [SerializeField] public Vector3 _spawnPosition;
 
     private GameObject currentMed;
 
@@ -93,6 +93,19 @@ public class MedicineSpawner : MonoBehaviour
 
       currentMed = Instantiate(_medicinePrefabs[randomNumber], _spawnPosition, Quaternion.identity);
       currentMed.GetComponent<Medicine>().SetAsNotPackedProperly();
+    }
+
+    public void DestroyCurrentMed()
+    {
+      if (currentMed != null)
+      {
+          Destroy(currentMed);
+      }
+    }
+
+    public void SetCurrentMed(GameObject obj)
+    {
+      currentMed = obj;
     }
 
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DispenseWindow : MonoBehaviour
@@ -5,14 +6,17 @@ public class DispenseWindow : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool isMouseDown;
 
-    private MedicineSpawner medSpawner;
+    [SerializeField] private MedicineSpawner medSpawner;
 
     private void Start()
     {
       spriteRenderer = GetComponent<SpriteRenderer>();
       // medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<MedicineSpawner>();
       // use rng spawner for unlimited mode
-      medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<RNGMedicineSpawner>();
+      // medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<RNGMedicineSpawner>();
+      // var spawnerRty = Type.GetType(_spawnerTypeName);
+      // medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<type>();
+
     }
 
     private void Update()

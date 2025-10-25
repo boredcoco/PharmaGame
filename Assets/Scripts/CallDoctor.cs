@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class CallDoctor : MonoBehaviour
 {
-    private MedicineSpawner medSpawner;
+    [SerializeField] private MedicineSpawner medSpawner;
 
     private void Start()
     {
       // medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<MedicineSpawner>();
       // use rng spawner for unlimited mode
-      medSpawner = GameObject.FindWithTag(Tags.MedicineSpawner).GetComponent<RNGMedicineSpawner>();
     }
 
     public void CallDoc()
